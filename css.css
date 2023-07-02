@@ -1,0 +1,47 @@
+
+        .gallery video:not(.active) {
+            display: none;
+        }
+
+        .gallery video {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            display: none; /* Скрыть все видео по умолчанию */
+        }
+        
+        .gallery video.active {
+            display: block; /* Показать только активное видео */
+        }
+        
+      
+        
+
+
+        
+
+        .gallery video {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            transition: box-shadow 0.3s ease;
+            cursor: pointer;
+            display: none;
+        }
+        
+        .gallery video.active {
+            display: block;
+        }
+        
+        .gallery video:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        
+
+
+        
+        
