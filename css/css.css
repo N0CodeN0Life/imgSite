@@ -1,0 +1,141 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #333;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    grid-gap: 20px;
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+.gallery img, .gallery video {
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery img:hover{
+    transform: scale(1.05) rotate(3deg);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.footer {
+    background-color: #333;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.upload-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+}
+
+.upload-btn input {
+    display: none;
+}
+
+.upload-btn label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.upload-btn label:hover {
+    background-color: #ff5722;
+}
+
+.toggle-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+        
+        
+        .gallery video:not(.active) {
+            display: none;
+        }
+
+        .gallery video {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            display: none; /* Скрыть все видео по умолчанию */
+        }
+        
+        .gallery video.active {
+            display: block; /* Показать только активное видео */
+        }
+        
+        .gallery video {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            transition: box-shadow 0.3s ease;
+            cursor: pointer;
+            display: none;
+        }
+        
+        .gallery video.active {
+            display: block;
+        }
+        
+        .gallery video:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        
+
+
+        
+        
